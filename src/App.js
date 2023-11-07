@@ -28,7 +28,7 @@ function App() {
   }, [])
   return (
     <div className="App">
-      <h1>Ranking Crytos</h1>
+      <h1>Ranking Crytos Modulo 3</h1>
       {listCryptos.map(crypto => <ItemCrypto 
         symbol={crypto.symbol} 
         price={crypto.priceUsd} 
