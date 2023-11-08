@@ -21,22 +21,34 @@ const sample = {
 function App() {
   const [listCryptos, setListCrytops] = React.useState([]);
   React.useEffect(() => {
-    fetch("https://api.coincap.io/v2/assets")
+    // fetch("https://api.coincap.io/v2/assets")
+    // fetch("https://newcastle.urbanobservatory.ac.uk/api/v1.1/sensors/json/")
+    fetch("https://xeno-canto.org/api/2/recordings?query=cnt:brazil")
       .then(response => response.json())
-      .then(dataJson => {setListCrytops(dataJson.data)});
-      
+      // .then(dataJson => {setListCrytops(dataJson.data)});
+      .then(dataJson => {setListCrytops(dataJson.recordings)});
   }, [])
+    // Imagenes https://picsum.photos/200/300
+    // Mensajes ded mascotas https://meowfacts.herokuapp.com/
   return (
     <div className="App">
-      <h1>Ranking Crytos Modulo 3</h1>
-      {listCryptos.map(crypto => <ItemCrypto 
-        symbol={crypto.symbol} 
-        price={crypto.priceUsd} 
-        rank={crypto.rank}
-        name={crypto.name} 
-        quantity={crypto.supply} 
-        marketCap={crypto.marketCapUsd}
-        key={crypto.symbol}
+      <h1>Bird World</h1>
+      {listCryptos.map(crypto => 
+      <ItemCrypto 
+        // symbol={crypto.symbol} 
+        // price={crypto.priceUsd} 
+        // rank={crypto.rank}
+        // name={crypto.name} 
+        // quantity={crypto.supply} 
+        // marketCap={crypto.marketCapUsd}
+        // key={crypto.symbol}
+        symbol={crypto.sp} 
+        price={crypto.id} 
+        rank={crypto.en}
+        name={crypto.gen} 
+        quantity={crypto.loc} 
+        marketCap={crypto.sono.full}
+        key={crypto.id}
       />)}
       
     </div>
