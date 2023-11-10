@@ -1,0 +1,42 @@
+/* .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: aqua;
+    
+} */
+.container-bird {
+    min-width: 200px;
+    max-width: 400px;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    padding: 25px;
+    background-color: rgb(182, 65, 65);
+    color: white;
+    margin: 10px;
+}
+
+.header-bird {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    margin-left: -20px;
+}
+.body-bird {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.body-name {
+    color: black;
+}
+.price-bird {
+    color: white;
+    font-size: 30px;
+}
+.img-bird {
+    margin-top: 10px;
+    width: 300px;
+    height: 100px;
+}
